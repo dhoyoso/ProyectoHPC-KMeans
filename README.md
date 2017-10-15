@@ -67,13 +67,13 @@ time: <Tiempo que tómo la ejecución del algoritmo en segundos>
 ```
 
 
-## Authors
+## Autores
 
 * **Daniela Serna Escobar**
 * **Daniel Hoyos Ospina**
 
 
-## Acknowledgments
+## Reconocimientos
 Este trabajo es original, autentico, no copiado y se reconoce a terceros y otras fuentes de información que influenciaron en el desarrollo del mismo como:
 
 * Edwin Nelson Montoya Munera
