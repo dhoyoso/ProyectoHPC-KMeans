@@ -6,71 +6,66 @@ Este proyecto se divide en dos subproblemas:
 - Diseño e implementación de una función de similaridad entre 2 documentos: Para esto nos basamos en el algoritmo de Jaccard con una pequeña modificación para hacerlo más preciso.
 - Una vez se tiene definida e implementada la función de similaridad, se puede ejecutar el algoritmo de clustering K-Means.
   
-## Getting Started
+## Empezando
 
-### Prerequisites
+### Prerequisitos
 
-What things you need to install the software and how to install them
+- pip | [Anaconda] (https://anaconda.org/anaconda/python)
+- Python -> 2.7.13
+- openMPI -> 1.6.3
 
-```
-Give examples
-```
 
-### Installing
+### Instalación
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+Instala las dependencias para el proyecto.
 
 ```
-Give the example
+$ conda create -n mpi python=2.7
+$ conda install -n mpi numpy
+$ conda install -n mpi mpi4pi
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+luego
 
 ```
-Give an example
+$ source activate mpi
+(mpi) $ mpiexec --version
+> mpiexec (OpenRTE) 1.6.3
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+luego al final de la definicion de los metodos de cualquiera de las implementaciones se deben cambiar las variables:
 
 ```
-Give an example
+k = <Numero de clusters (Entero)>
+ruta = <ruta de la carpeta que contiene todos los archivos a clusterizar>
 ```
 
-## Deployment
+## Corriendo pruebas
 
-Add additional notes about how to deploy this on a live system
+Para el paralelo:
 
-## Built With
+```
+(mpi) $ mpiexec -n <number of cores> python ./Paralel.py
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+```
+Para el serial:
 
-## Contributing
+```
+ $ python Serial.py
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+```
+la salida de ambas implementaciones es:
 
-## Versioning
+```
+> centroides: <Array de centroides en la primera iteración>
+sin relacion: <Set de documentos que no tienen relación a ningún cluster>
+clusters: <Map de clusters en donde la clave es el numero de cluster y la key un Array de documentos de ese cluster>
+centroides: <Array de nuevos centroides despúes del recentrado>
+sin relacion: <Set de documentos que no tienen relación a ningún cluster>
+clusters: <Map de clusters despúes de recentrar y recalcular>
+time: <Tiempo que tómo la ejecución del algoritmo en segundos>
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+```
+
 
 ## Authors
 
@@ -78,9 +73,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
