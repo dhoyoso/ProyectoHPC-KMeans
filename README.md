@@ -79,5 +79,8 @@ Este trabajo es original, autentico, no copiado y se reconoce a terceros y otras
 * Edwin Nelson Montoya Munera
 * Juan Guillermo Lalinde Pulido
 * Juan David Pineda Cardenas
+* Edwin Montoya Jaramillo
+* Daniel Rendon Montaño
+* Diego Alejandro Perez
 * [Explicación del algoritmo de similaridad de Jaccard](http://techinpink.com/)
 * [Apertura de archivos y division del mismo (respuesta de Brionius  Aug 8 '13 at 21:12)](https://stackoverflow.com/questions/18135967/creating-a-list-of-every-word-from-a-text-file-without-spaces-punctuation)
