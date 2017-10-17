@@ -77,10 +77,11 @@ time: <Tiempo que tómo la ejecución del algoritmo en segundos>
 Este trabajo es original, autentico, no copiado y se reconoce a terceros y otras fuentes de información que influenciaron en el desarrollo del mismo como:
 
 * Edwin Nelson Montoya Munera
-* Juan Guillermo Lalinde Pulido
 * Juan David Pineda Cardenas
-* Edwin Montoya Jaramillo
 * Daniel Rendon Montaño
+* Juan Guillermo Lalinde Pulido
+* Edwin Montoya Jaramillo
+* Dillan Alexis Muñeton
 * Diego Alejandro Perez
 * [Explicación del algoritmo de similaridad de Jaccard](http://techinpink.com/)
 * [Apertura de archivos y division del mismo (respuesta de Brionius  Aug 8 '13 at 21:12)](https://stackoverflow.com/questions/18135967/creating-a-list-of-every-word-from-a-text-file-without-spaces-punctuation)
